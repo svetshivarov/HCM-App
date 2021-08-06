@@ -1,0 +1,20 @@
+<% 
+var dayoff
+for(var i=0; i<dayoff; i++) { %>
+    <tr>
+        <td><%= i+1 %></td>
+        <td><%= dayoff[i].employee %></td>
+        <td>Last Name</td>
+        <td><%= dayoff[i].startdayoff %></td>
+        <td><%= dayoff[i].lastdayoff %></td>
+        <td><%= dayoff[i].total %></td>
+        <td>
+            <a href="/update-dayoff?id=<%= dayoff[i]._id %>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a href="#" class="btn border-shadow delete" data-id=<%= dayoff[i]._id %> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

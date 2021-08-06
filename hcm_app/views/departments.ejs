@@ -1,0 +1,45 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+    <!-- Main Section -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/home" class="border-shadow">
+                    <span class="text-gradient">Home <i class="fas fa-home"></i></span>
+                </a>
+                <a href="/add-department" class="border-shadow">
+                    <span class="text-gradient">New Department <i class="fa-solid fa-building"></i></span>
+                </a>
+                <a href="/salary" class="border-shadow">
+                    <span class="text-gradient">Salaries <i class="fas fa-money-check-alt"></i></span>
+                </a>
+                <a href="/dayoff" class="border-shadow">
+                    <span class="text-gradient">Day Offs <i class="fas fa-suitcase-rolling"></i></span>
+                </a>
+            </div>
+            <!-- form handling -->
+        <form action="/departments" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Department</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_showdepartments') %>
+                </tbody>
+            </table>
+        </form>
+        </div>
+    </main>
+        <!-- /Main Section -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

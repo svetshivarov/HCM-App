@@ -1,0 +1,19 @@
+<% 
+var departments
+for(var i=0; i<departments; i++) { %>
+    <tr>
+        <td><%= i+1 %></td>
+        <td><%= departments[i].department %></td>
+        <td>Last Name</td>
+        <td><%= departments[i].location %></td>
+        <td><%= users[i].status %></td>
+        <td>
+            <a href="/update-department?id=<%= departments[i]._id %>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a href="#" class="btn border-shadow delete" data-id=<%= departments[i]._id %> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

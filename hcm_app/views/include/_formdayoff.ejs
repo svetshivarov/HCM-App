@@ -1,0 +1,25 @@
+            <!-- form handling -->
+            <form action="/api/dayoff" method="POST" id="add-dayoff">
+                <div class="new-_salary">
+                    <div class="form-group">
+                        <label for="employee" class="text-light">Employee</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="employee" placeholder="Mark">
+                    </div>
+                    <div class="form-group">
+                        <label for="startdayoff" class="text-light">Start Day</label>
+                        <input type="date" name="startdayoff" placeholder="Enter Day Off">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastdayoff" class="text-light">Last Day</label>
+                        <input type="date" name="lastdayoff" placeholder="Enter Last Day Off">
+                    </div>
+                    <div class="form-group">
+                        <label for="total" class="text-light">Total Days</label>
+                        <input type="number" name="total" placeholder="Total Day Off">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+                </div>
+            </form>
