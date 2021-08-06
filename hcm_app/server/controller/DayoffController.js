@@ -10,7 +10,7 @@ exports.create = (req,res) => {
 
     // new day off
     const dayoff = new DayoffDB ({
-        employee:req.body.employee,
+        name:req.body.name,
         start:req.body.start,
         last:req.body.last,
         total:req.body.total

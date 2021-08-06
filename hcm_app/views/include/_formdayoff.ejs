@@ -2,9 +2,11 @@
             <form action="/api/dayoff" method="POST" id="add-dayoff">
                 <div class="new-_salary">
                     <div class="form-group">
-                        <label for="employee" class="text-light">Employee</label>
+                        <label for="cars">Choose an Employee:</label>
+                        <select name="name" id="name">
+                          <option value=""></option>
+                        </select>
                         <input type="hidden" name="id" value="">
-                        <input type="text" name="employee" placeholder="Mark">
                     </div>
                     <div class="form-group">
                         <label for="startdayoff" class="text-light">Start Day</label>
