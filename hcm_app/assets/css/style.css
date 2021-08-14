@@ -334,5 +334,5 @@ table{
 #add_departments .form-group .btn:hover,
 #add-dayoff .form-group .btn:hover {
     background-color: var(--dark);
-    color: var(--border);
+    color: var(--border); 
 } 
