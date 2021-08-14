@@ -31,13 +31,16 @@ exports.create = (req,res) => {
         });
 }
 
+
 //retrieve and return user/s
 exports.find = (req, res)=> {
 
+  
     if(req.query.id) {
         const id = req.query.id;
         
         SalaryDB.findById(id)
+        .populate({path: 'user', select:['name']})
             .then(data => {
                 if(!data) {
                     res.status(404).send({ message : "Not found user with id "+ id})

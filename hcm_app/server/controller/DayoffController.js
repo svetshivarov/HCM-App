@@ -31,6 +31,7 @@ exports.create = (req,res) => {
         });
 }
 
+
 //retrieve and return day off
 exports.find = (req, res)=> {
 
@@ -38,6 +39,7 @@ exports.find = (req, res)=> {
         const id = req.query.id;
 
         DayoffDB.findById(id)
+        .populate({path: 'user', select:['name']})
             .then(data => {
                 if(!data) {
                     res.status(404).send({ message : "Not found day off with id "+ id})
@@ -69,6 +71,7 @@ exports.update = (req, res)=>{
 
     const id = req.params.id;
     DayoffDB.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
+    .populate({path: 'user', select:['name']})
         .then(data => {
             if(!data){
                 res.status(404).send({ message : `Cannot Update day off with ${id}. Maybe user not found!`})
