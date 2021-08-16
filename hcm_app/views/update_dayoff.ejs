@@ -1,0 +1,55 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Users</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Day Off</h2>
+            <span class="text-light">Use the below form to Update a Day Off</span>
+        </div>
+
+        <!-- add salary form -->
+         <!-- form handling -->
+         <form action="/api/dayoff" method="POST" id="add-dayoff">
+            <div class="new-_salary">
+                <div class="form-group">
+                    <label for="cars">Choose an Employee:</label>
+                    <!-- <select name="name" id="name" >
+                      <option value="name"></option>
+                    </select> -->
+                    <input type="hidden" name="id" value="<%= dayoff._id %>">
+                    <input type="text" name="name" value="<%= dayoff.name %>" placeholder="Mark">
+                </div>
+                <div class="form-group">
+                    <label for="startdayoff" class="text-light">Start Day</label>
+                    <input type="date" name="startdayoff" value="<%= dayoff.startdayoff %>" placeholder="Enter Day Off">
+                </div>
+                <div class="form-group">
+                    <label for="lastdayoff" class="text-light">Last Day</label>
+                    <input type="date" name="lastdayoff" value="<%= dayoff.lastdayoff %>" placeholder="Enter Last Day Off">
+                </div>
+                <div class="form-group">
+                    <label for="total" class="text-light">Total Days</label>
+                    <input type="number" name="total" value="<%= dayoff.total %>" placeholder="Total Day Off">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+            </div>
+        </form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

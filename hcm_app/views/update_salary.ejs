@@ -23,28 +23,25 @@
         <div class="new-_salary">
             <div class="form-group">
                 <label for="name" class="text-light">Name</label>
-                <input type="hidden" name="id" value="">
-                <input type="text" name="name" placeholder="Mark">
+                <input type="hidden" name="id" value="<%= salaries._id %>">
+                <input type="text" name="name" value="<%= user.name %>" placeholder="Mark">
             </div>
             <div class="form-group">
                 <label for="salary" class="text-light">Salary</label>
-                <input type="text" name="salary" placeholder="Enter salary">
+                <input type="text" name="salary" value="<%= salaries.salary %>" placeholder="Enter salary">
             </div>
             <div class="form-group">
-                <label for="bonus" class="text-light">Bonus</label>
-                <input type="text" name="bonus" placeholder="Enter bonus">
+                <label for="bonus" class="text-light">Bonus in %</label>
+                <input type="text" name="bonus" value="<%= salaries.bonus %>" placeholder="Enter bonus">
             </div>
             <div class="form-group">
                 <label for="total" class="text-light">Total</label>
-                <input type="text" name="total" placeholder="Enter total salary">
+                <input type="text" name="total" value="<%= salaries.total %>" placeholder="Enter total salary">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn text-dark update">Save</button>
             </div>
-        <div class="form-group">
-            <button type="submit" class="btn text-dark update">Save</button>
         </div>
-
     </div>
 </form>
        

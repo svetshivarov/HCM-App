@@ -97,18 +97,18 @@ exports.update_dayoff = (req,res) => {
     })
 }
 
-function setUser(req, res, next) {
-    const userId = req.body.userId
-    if (userId) {
-      req.user = users.find(user => user.id === userId)
-    }
-    next()
-  }
+// function setUser(req, res, next) {
+//     const userId = req.body.userId
+//     if (userId) {
+//       req.user = users.find(user => user.id === userId)
+//     }
+//     next()
+//   }
 
-  function setDepartment(req, res, next) {
-    const deptId = req.body.deptId
-    if (deptId) {
-      req.department = departments.find(department => department.id === deptId)
-    }
-    next()
-  }
+//   function setDepartment(req, res, next) {
+//     const deptId = req.body.deptId
+//     if (deptId) {
+//       req.department = departments.find(department => department.id === deptId)
+//     }
+//     next()
+//   }
